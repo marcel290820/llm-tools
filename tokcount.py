@@ -124,6 +124,9 @@ Supported encodings:
 
 def main() -> int:
     """Main entry point."""
+    import logging
+    logging.getLogger("pypdf").setLevel(logging.ERROR)
+
     parser = create_parser()
     args = parser.parse_args()
     
